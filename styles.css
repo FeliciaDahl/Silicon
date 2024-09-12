@@ -68,10 +68,63 @@ body {
     text-decoration: none;
     color: var(--clr-nav);
     font-weight: 600;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .btn-nav {
     border: none;
     background-color: white;
 }
+
+.btn-toggle {
+    color: var(--clr-bd-text);
+    font-weight: 600;
+}
+.switch {
+--_w: 60px;
+--_h: 30px;
+
+    position: relative;
+    display: inline-block;
+    width: var(--_w);
+    height: var(--_h);
+  
+  input[type="checkbox"]  {
+    appearance: none;
+
+    }
+
+  .slider {
+    position: absolute;
+    inset: 0;
+    background-color: var(--clr-m-text);
+    border-radius: 100vw;
+    cursor: pointer;
+  }
+  
+  .slider::before {
+    content: "";
+    position: absolute;
+    top:50%;
+    left: 2.5px;; 
+    transform: translateY(-50%);
+    aspect-ratio: 1;
+    height: 90%;
+    border-radius: 50%;
+    border: none;
+    background-color: white;
+   
+   transition: all .2s;
+   
+  }
+
+  input[type="checkbox"]:checked + .slider::before {
+    left: calc(100% - var(--_h));
+  }
+
+}
+
 
