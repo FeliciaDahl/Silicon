@@ -17,6 +17,8 @@
     --container-padding: 1rem;
     --transition-time: all .2s ;
 
+     linear-gradient(to right, #6366F1, #8B5CF6, #D946EF);
+
 }
 
 * {
@@ -165,6 +167,11 @@ display: none;
     background-color: white;
 }
 
+.hero {
+  background-image: radial-gradient(circle, hsla(239, 84%, 67%, 0.063),  hsla(258, 90%, 66%, 0.156), #d846ef2f);
+ 
+
+}
 .hero-section-1{
   
   padding: var(--container-padding);
@@ -212,6 +219,30 @@ display: none;
   border: none;
   border-radius: 8px;
 }
+}
+.hero-section-3{
+
+  padding: var(--container-padding);
+  display: flex;
+  gap: 1rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  .discover-more {
+  width: 45px;
+  height: 45px;
+  justify-items: center;
+  border-radius: 50%;
+  background-color: var(--crl-light);
+  border: none;
+
+  #discover {
+    display: inline-block;
+    color: var(--clr-bd-text);
+  }
+}
+
 }
 /* HJÄLP med poistionen av Dark-mode */
 @media (min-width: 768px) {
