@@ -39,7 +39,9 @@ body {
     width: 100%;
     padding-left: 1rem;
     padding-right: 1rem;
-    margin: 1 auto;
+    margin: auto;
+
+   
 }
 
 header {
@@ -47,6 +49,7 @@ header {
     display: grid;
     align-items: center;
     grid-template-columns: 1fr auto auto;
+    justify-content: flex-start;
     gap: 1rem;
  }
     
@@ -71,13 +74,15 @@ display: none;
 .btn-toggle {
     color: var(--clr-bd-text);
     font-weight: 600;
+    position: relative;
     display: inline-block;
-
+     
+    }
+    
     #dark-mode {
-        display: none;
+      display: none;
     }
-    }
-
+    
 .switch {
 --_w: 60px;
 --_h: 30px;
@@ -160,4 +165,36 @@ display: none;
     background-color: white;
 }
 
+/* HJÄLP med poistionen av Dark-mode */
+@media (min-width: 768px) {
+ 
+  header .container{
+    max-width: 720px;
+    gap: 3rem;
+  }
+  #dark-mode {
+ display: block;
+ color:black;
+    }
 
+}
+
+@media (min-width: 900px) {
+
+  header .container{
+    max-width: 850px;
+    gap: 3rem;
+
+    grid-template-columns:auto 1fr auto auto;
+  }
+
+  #nav-f {
+    display: block;
+  }
+  #sign-in {
+    display: block;
+  }
+  .btn-nav {
+    display: none;
+  }
+}
