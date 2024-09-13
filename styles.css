@@ -35,36 +35,29 @@ body {
     font-size: 16px;
 }
 
-.btn-header{
-
-   width: 140px;
-   height: 36px;
-
-    background-color: var(--crl-primary);
-    color: var(--crl-light);
-    border-radius: 8px;
-    border:none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 2px var(--clr-nav);
-          
-    &:hover {
-        text-decoration: underline;
-        border: 1px solid var(--clr-dark);
-        
-    } 
-
-    
-    a {
-        color: var(--crl-light);
-        text-decoration: none;
-    }
-
-
+.container {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 1 auto;
 }
 
+header {
+ .container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr auto auto;
+    gap: 1rem;
+ }
+    
+}
+#nav-f {
+
+display:inline-block;
+display: none;
+
 .nav-features {
+
     text-decoration: none;
     color: var(--clr-nav);
     font-weight: 600;
@@ -73,16 +66,18 @@ body {
         text-decoration: underline;
     }
 }
-
-.btn-nav {
-    border: none;
-    background-color: white;
 }
 
 .btn-toggle {
     color: var(--clr-bd-text);
     font-weight: 600;
-}
+    display: inline-block;
+
+    #dark-mode {
+        display: none;
+    }
+    }
+
 .switch {
 --_w: 60px;
 --_h: 30px;
@@ -125,6 +120,44 @@ body {
     left: calc(100% - var(--_h));
   }
 
+}
+
+#sign-in {
+    display: none;
+}
+
+.btn-header{
+
+    width: 140px;
+    height: 36px;
+ 
+     background-color: var(--crl-primary);
+     color: var(--crl-light);
+     border-radius: 8px;
+     border:none;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     box-shadow: 0 0 2px var(--clr-nav);
+           
+     &:hover {
+         text-decoration: underline;
+         border: 1px solid var(--clr-dark);
+         
+     } 
+ 
+     
+     a {
+         color: var(--crl-light);
+         text-decoration: none;
+     }
+ 
+ 
+ }
+
+.btn-nav {
+    border: none;
+    background-color: white;
 }
 
 
