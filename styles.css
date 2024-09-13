@@ -79,6 +79,13 @@ display: none;
     position: relative;
     display: inline-block;
      
+/*     
+    &:hover {
+      border: .5px solid var(--clr-bd-text);
+      box-shadow: 0 0 3px var(--clr-m-text);
+      cursor: pointer;
+     } */
+ 
     }
     
     #dark-mode {
@@ -165,6 +172,10 @@ display: none;
 .btn-nav {
     border: none;
     background-color: white;
+
+    &:hover {
+      cursor: pointer;
+    }
 }
 
 .hero {
@@ -209,6 +220,12 @@ display: none;
     background-color: var(--clr-dark);
     border: none;
     border-radius: 8px;
+
+    &:hover {
+      border: .5px solid var(--clr-bd-text);
+      box-shadow: 0 0 3px var(--clr-m-text);
+      cursor: pointer;
+     }
 }
 #google{
   width: 100%;
@@ -218,9 +235,15 @@ display: none;
   background-color: var(--clr-dark);
   border: none;
   border-radius: 8px;
+
+  &:hover {
+    border: .5px solid var(--clr-bd-text);
+    box-shadow: 0 0 3px var(--clr-m-text);
+    cursor: pointer;
+   }
 }
 }
-.hero-section-3{
+.hero-section-3 {
 
   padding: var(--container-padding);
   display: flex;
@@ -237,13 +260,21 @@ display: none;
   background-color: var(--crl-light);
   border: none;
 
-  #discover {
+  &:hover {
+   border: .5px solid var(--clr-m-text));
+   box-shadow: 0 0 3px var(--clr-m-text);
+   cursor: pointer;
+  }
+  }
+
+  .discover {
     display: inline-block;
     color: var(--clr-bd-text);
+    
   }
 }
 
-}
+
 /* HJÄLP med poistionen av Dark-mode */
 @media (min-width: 768px) {
  
