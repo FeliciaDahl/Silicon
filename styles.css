@@ -165,6 +165,28 @@ display: none;
     background-color: white;
 }
 
+.section-1{
+  
+  padding: var(--container-padding);
+  display: grid;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  .hero-b-p{
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--clr-dark);
+  }
+  .hero-s-p {
+   padding-top: 1rem;
+    font-size: 18px;
+    color: var(--clr-bd-text);
+  }
+}
+
 /* HJÄLP med poistionen av Dark-mode */
 @media (min-width: 768px) {
  
