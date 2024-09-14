@@ -231,12 +231,15 @@ display: none;
   padding-top: 2rem;
   padding-left: 1rem;
   padding-right: 1rem; */
-
+.apple-google-btn{
+  display: grid;
+  gap:1rem;
+}
   #apple{
     width: 100%;
     height: 50px;
     padding-top: .5rem;
-    padding-bottom: .5rem;
+    padding-bottom: 1rem;
     background-color: var(--clr-dark);
     border: none;
     border-radius: 8px;
@@ -338,11 +341,14 @@ display: none;
           grid-row: 1 / 3;
         }
         .apple-google-btn{
-          display: flex;
+          /* display: flex;
           align-items: center;
-          gap: 1rem;
+          gap: 1rem; */
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap:1rem;
         }
-        .apple-btn {
+        /* .apple-btn {
           width: 50%;
 
           img {
@@ -371,7 +377,7 @@ display: none;
            object-fit: scale-down;
            overflow-block:auto;
           }
-        }
+        } */
 
       }
         .img-hero {
