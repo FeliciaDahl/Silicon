@@ -42,7 +42,6 @@ body {
     padding-right: 1rem;
     margin: 0 auto;
 
-   
 }
 
 header {
@@ -337,12 +336,33 @@ right: 100px;
 
 }
 
-.icons {
-  display: flex;
-  gap:var(--container-padding)
+.container{
+
+.icons{
+  margin: 0 auto;
+display: flex;
+ gap: var(--container-padding);
+ padding: 1rem;
+ /* justify-content:space-evenly; */
+ padding-bottom: 2rem;
+ align-items: center;
+justify-items: center;
+justify-content: center;
+
 }
 
-
+.icon-boxes {
+  border: 1px solid var(--clr-br);
+  border-radius: 8px;
+  padding: .5rem;
+  width: 200px;
+  height: 90px;
+  display: flex;
+ justify-content: center;
+ justify-items: center;
+ align-items: center;
+}
+}
 @media (min-width: 768px) {
  
   header .container{
