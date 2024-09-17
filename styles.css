@@ -363,7 +363,38 @@ justify-content: center;
  justify-items: center;
  align-items: center;
 }
+.app-features {
+  padding: 2rem;
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+}
+.h2-features{
+  font-size: 28px;
+  font-weight: 800;
+  justify-content: center;
+}
+.p-features {
+font-size: 16px;
+color: var(--clr-bd-text);
+}
 
+.box-pic {
+  background-color: #6365f133;
+  opacity: .8;
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  justify-items: center;
+  justify-content: center;
+  align-content: center;
+
+}
+.benefit-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
 @media (min-width: 768px) {
  
