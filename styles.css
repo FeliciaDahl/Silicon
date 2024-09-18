@@ -366,6 +366,7 @@ justify-content: center;
 .app-features {
   padding: 2rem;
   display: grid;
+  gap:2rem;
   justify-content: center;
   text-align: center;
   align-content: center;
@@ -374,14 +375,16 @@ justify-content: center;
   font-size: 28px;
   font-weight: 800;
   justify-content: center;
+  padding-bottom: 1rem;
 }
 .p-features {
-font-size: 16px;
+font-size: 18px;
 color: var(--clr-bd-text);
+padding-bottom: 1rem;
 }
 
 .box-pic {
-  background-color: #6365f133;
+  background-color: #6365f113;
   opacity: .8;
   width: 60px;
   height: 60px;
@@ -391,9 +394,35 @@ color: var(--clr-bd-text);
   align-content: center;
 
 }
-.benefit-box {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.box {
+
+color: var(--clr-bd-text);
+
+display: grid;
+/* max-width: 500px; */
+margin: 0 auto;
+grid-template-columns: 1fr auto;
+align-content: center;
+align-items: center;
+justify-content: center;
+justify-items: center;
+gap:1rem;
+padding: 1rem;
+
+h3{
+  color: var(--clr-dark);
+
+}
+p{
+  padding-top: .5rem;
+}
+.text{
+  text-align: left;
+  padding-left: 1rem;
+ 
+  
+}
+
 }
 
 @media (min-width: 768px) {
@@ -456,6 +485,11 @@ color: var(--clr-bd-text);
    }
    #brand-1, #brand-2{
     display: none;
+   }
+
+   .benefit-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
    }
       } 
      
