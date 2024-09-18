@@ -366,11 +366,12 @@ justify-content: center;
 .app-features {
   padding: 2rem;
   display: grid;
+  margin: 0 auto;
   gap:2rem;
   justify-content: center;
   text-align: center;
   align-content: center;
- 
+
 }
 .app-info {
   display: grid;
@@ -404,11 +405,10 @@ padding-bottom: 1rem;
 color: var(--clr-bd-text);
 
 display: grid;
-/* max-width: 500px; */
 margin: 0 auto;
 grid-template-columns: 1fr auto;
 align-content: center;
-align-items: center;
+align-items: top;
 justify-content: center;
 justify-items: center;
 gap:1rem;
@@ -429,24 +429,30 @@ p{
 }
 
 .img-features {
+  
+  
   display: grid;
   position: relative;
+  
+  width: 100%;
   grid-area: app;
+   display: none;
+ 
 }
-
-#img-phone {
+#img-iphone {
   position: absolute;
-  /* bottom: 0; */
-  /* right:0; */
+  left:80px;
+  z-index: 100;
  
 }
 #img-card {
   position: absolute;
- 
-  left: 50;
-  top:80px;
+  top:120px;
+  left:80px;
+  z-index: 800;
 
 }
+
 
 
 
@@ -564,13 +570,25 @@ p{
 #brand-icons, #brand-1, #brand-2 {
   display: flex; 
 }
-
+.img-features{
+  display: block;
+  padding:2rem;
+  justify-items: center;
+}
   .app-features .container
   {
+ 
    display: grid;
+   max-width: 1300px;
+   justify-content: center;
+   gap: 1rem;
+   width: 100%;
    grid-template-columns: 1fr 1fr;
    grid-template-areas: "app info"
                          "app info";
-  
+ .box {
+  padding-left: 2rem;
+ }
+
   } 
 }
