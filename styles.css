@@ -362,6 +362,11 @@ justify-content: center;
  justify-content: center;
  justify-items: center;
  align-items: center;
+
+ &:hover {
+  border: .5px solid var(--crl-primary);
+  box-shadow: 0 0 5px var(--clr-m-text);
+  cursor: pointer; }
 }
 .app-features {
   padding: 2rem;
@@ -378,7 +383,7 @@ justify-content: center;
   grid-area: info;
 }
 .h2-features{
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 800;
   justify-content: center;
   padding-bottom: 1rem;
@@ -433,24 +438,62 @@ p{
   
   display: grid;
   position: relative;
-  
   width: 100%;
   grid-area: app;
    display: none;
  
 }
 #img-iphone {
-  position: absolute;
-  left:80px;
+  display: grid;
+  left:0;
   z-index: 100;
  
 }
 #img-card {
-  position: absolute;
-  top:120px;
-  left:80px;
+ position: absolute;
+  top: 120px;
+  left: 80px;
   z-index: 800;
 
+}
+.function .container{
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0 auto;
+}
+.function-h2 {
+  color: var(--clr-dark);
+  font-size: 32px;
+  font-weight: 800;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+.function-img {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.function-tx {
+  margin: 0 auto;
+  display: grid;
+  padding: 2rem;
+  max-width: 600px;
+  justify-content: center;
+  text-align: center;
+  justify-content: center;
+  p {
+    color: var(--clr-bd-text);
+  }
+}
+
+.function-tablet {
+  h3 {
+    font-size: 32px;
+  }
 }
 
 
@@ -572,6 +615,7 @@ p{
 }
 .img-features{
   display: block;
+  
   padding:2rem;
   justify-items: center;
 }
@@ -589,6 +633,11 @@ p{
  .box {
   padding-left: 2rem;
  }
-
+ .h2-features {
+ text-align: left; 
+}
+.p-features{
+  text-align: left;
+}
   } 
 }
