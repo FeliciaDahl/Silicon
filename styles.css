@@ -472,7 +472,7 @@ p{
 }
 .function-img {
   display: flex;
-  gap: 4rem;
+  gap: 2rem;
   align-items: center;
   align-content: center;
   justify-content: center;
@@ -490,14 +490,36 @@ p{
   }
 }
 
-.function-tablet {
+.function-mobile {
+
   h3 {
-    font-size: 32px;
+    display: grid;
+    margin: 0 auto;
+    font-weight: 800;
+    font-size: 21px;
+    max-width: 300px;
+    padding-bottom: 1rem;
+  }
+  #pic-tv-2-m{
+    position: absolute;
   }
 }
 
 
+.function-tablet {
+  h3 {
+    font-size: 32px;
+  }
+  #pic-tv-2 {
+    position: absolute;
+  }
+  }
 
+
+
+.function-desktop {
+  display: none;
+}
 
 @media (min-width: 768px) {
  
@@ -566,6 +588,10 @@ p{
     grid-template-columns: 1fr 1fr;
    }
       
+.function-mobile {
+  display: none;
+}
+
   } 
 
   /* Media slutade fungera om högre än 1000.. varförrrr */
@@ -640,4 +666,11 @@ p{
   text-align: left;
 }
   } 
+  .function-desktop {
+    display: block;
+  }
+
+  .function-tablet {
+    display: none;
+  }
 }
