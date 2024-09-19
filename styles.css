@@ -458,13 +458,14 @@ p{
 }
 .function .container{
   width: 100%;
+  padding-top: 4rem;
   padding-left: 1rem;
   padding-right: 1rem;
   margin: 0 auto;
 }
 .function-h2 {
   color: var(--clr-dark);
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 800;
   justify-content: center;
   text-align: center;
@@ -472,7 +473,9 @@ p{
 }
 .function-img {
   display: flex;
-  gap: 2rem;
+  width: 100%;
+  margin: 0 auto;
+  gap: 4rem;
   align-items: center;
   align-content: center;
   justify-content: center;
@@ -507,6 +510,8 @@ p{
 
 
 .function-tablet {
+  display: none;
+
   h3 {
     font-size: 32px;
   }
@@ -519,6 +524,11 @@ p{
 
 .function-desktop {
   display: none;
+
+  h3{
+    font-size: 24px;
+    font-weight: 800;
+  }
 }
 
 @media (min-width: 768px) {
@@ -591,11 +601,15 @@ p{
 .function-mobile {
   display: none;
 }
-
+.function-tablet {
+  display: block;
+  margin: 0 auto;
+  max-width: 720px;
   } 
 
+}
   /* Media slutade fungera om högre än 1000.. varförrrr */
-@media (min-width: 1000px) {
+@media (min-width: 1400px) {
 
   header .container
   {
@@ -667,7 +681,11 @@ p{
 }
   } 
   .function-desktop {
+  
     display: block;
+    max-width: 1300px;
+    margin: 0 auto;
+
   }
 
   .function-tablet {
