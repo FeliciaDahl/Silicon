@@ -458,10 +458,10 @@ p{
 }
 .function .container{
   width: 100%;
-  padding-top: 4rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 4rem 1rem 4rem 1rem;
   margin: 0 auto;
+
+  background-color: #F3F6FF;
 }
 .function-h2 {
   color: var(--clr-dark);
@@ -530,6 +530,85 @@ p{
     font-weight: 800;
   }
 }
+
+.faq-heading {
+  padding-top: 4rem;
+  max-width: 350px;
+  text-align: center;
+  margin: 0 auto;
+  
+  h2 {
+    font-size: 25px;
+    font-weight: 800; 
+    padding-bottom: 1rem;
+  }
+  p {
+    font-size: 18px;
+    color: var(--clr-bd-text);
+    padding-bottom: 1rem;
+ 
+  }
+}
+
+.faq-accordion {
+  
+  input {
+    display: none;
+}
+
+label {
+    display: grid;
+    display: block;    
+    padding: 1rem;
+    margin: 0 auto;
+    cursor: pointer;
+    
+    border: .5px solid var(--clr-br);
+    border-radius: 3px;
+    color: var(--clr-dark);
+    font-weight: 600;
+    transition: ease .5s;
+
+    #btn-up {
+
+      width: 30px;
+      border-radius: 50%;
+      border: none;
+      
+      background-color: var(--crl-primary);
+      cursor: pointer;
+    
+      
+    }
+}
+
+label:hover {
+    box-shadow: 0 0 5px;
+   
+}
+
+.content {
+    color: var(--clr-bd-text);
+    padding: 2rem;
+    border: .5px solid var(--clr-br);
+    margin: 0 0 1px 0;
+    border-radius: 3px;
+}
+
+input + label + .content {
+    display: none;
+}
+
+input:checked + label + .content {
+    display: block;
+}
+
+}
+
+
+
+ 
+
 
 @media (min-width: 768px) {
  
@@ -608,7 +687,7 @@ p{
   } 
 
 }
-  /* Media slutade fungera om högre än 1000.. varförrrr */
+  
 @media (min-width: 1400px) {
 
   header .container
@@ -692,3 +771,6 @@ p{
     display: none;
   }
 }
+
+/* Känns som jag måste repetera samma kod ofta
+hur kan man fixa detta. tex container margin */
