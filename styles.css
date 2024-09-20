@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap'); 
 :root {
 
-    --crl-primary: #6366F1;
+    --crl-primary: #6366F1; 
     --crl-secondary:#EFF2FC;
     --crl-light: #F3F6FF;
     --clr-dark: #0B0F19;
@@ -157,7 +157,7 @@ display: none;
      box-shadow: 0 0 2px var(--clr-nav);
            
      &:hover {
-         text-decoration: underline;
+        
          border: 1px solid var(--clr-dark);
          
      } 
@@ -530,10 +530,17 @@ p{
     font-weight: 800;
   }
 }
+/* Varför följer inte container med?? */
+.faq {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0 auto;
+}
 
 .faq-heading {
   padding-top: 4rem;
-  max-width: 350px;
+  /* max-width: 350px; */
   text-align: center;
   margin: 0 auto;
   
@@ -550,36 +557,41 @@ p{
   }
 }
 
+/* FRÅGA! Hur jag får pil till höger och centrerad */
 .faq-accordion {
-  
+  .test {
+
+    display: grid;
+    padding-bottom: 2rem;
+    /* align-items: center;
+    text-align: center; */
+    border: .5px solid var(--clr-br); 
+ }
+  }
+
   input {
-    display: none;
+    appearance: none;
+   
 }
 
+/* Vilken del ska jag använda? */
 label {
     display: grid;
-    display: block;    
+    /* display: block;     */
     padding: 1rem;
     margin: 0 auto;
     cursor: pointer;
-    
-    border: .5px solid var(--clr-br);
+/*     
+    border: .5px solid var(--clr-br); */
     border-radius: 3px;
     color: var(--clr-dark);
     font-weight: 600;
-    transition: ease .5s;
+    transition: ease .2s;
 
-    #btn-up {
+}
 
-      width: 30px;
-      border-radius: 50%;
-      border: none;
-      
-      background-color: var(--crl-primary);
-      cursor: pointer;
-    
-      
-    }
+&:hover input::before {
+  /* box-shadow: 0 0 5px var(--clr-dark); */
 }
 
 label:hover {
@@ -594,7 +606,25 @@ label:hover {
     margin: 0 0 1px 0;
     border-radius: 3px;
 }
+input::before {
+  content: url("https://img.icons8.com/material-sharp/16/1A1A1A/expand-arrow--v1.png");
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+  width: 30px;
+  aspect-ratio: 1/ 1;
+  border: .3px solid black;
+  border-radius: 50%;
+}
+input:checked::before {
+  display: grid;
+  justify-items: end;
+  content: url("https://img.icons8.com/material-outlined/16/FFFFFF/collapse-arrow.png");
+  background-color: var(--crl-primary);
+  color: var(--crl-light);
+  justify-items: end;
+}
 input + label + .content {
     display: none;
 }
@@ -603,7 +633,54 @@ input:checked + label + .content {
     display: block;
 }
 
+.btn-contact {
+
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  padding-top: 2rem;
+  margin: 0 auto;
+
+  button{
+  width: 160px;
+  padding: 1rem;
+  background-color: var(--crl-primary);
+  border: none;
+  border-radius: 6px;
+  color: var(--crl-light);
+  box-shadow: 0 0 2px var(--clr-nav);
+           
+  &:hover {
+      border: .5px solid var(--clr-nav);
+      cursor: pointer;
+  }
 }
+}
+
+.newsletter {
+  margin: .5rem;
+  padding: 2rem;
+  border-radius: 8px;
+  background-color: #F3F6FF;
+}
+form {
+  display: flex;
+  flex-direction: row;
+
+  padding: 2px;
+  border: 1px solid var(--clr-br);
+  border-radius: 8px;
+
+  .input-email {
+    height: 100%;
+    flex-grow:2;
+    border:none;
+    border-radius: 8px;
+    outline: none;
+}
+}
+
 
 
 
@@ -685,6 +762,10 @@ input:checked + label + .content {
   margin: 0 auto;
   max-width: 720px;
   } 
+.faq
+{
+  max-width: 720px;
+}
 
 }
   
@@ -768,6 +849,10 @@ input:checked + label + .content {
   }
 
   .function-tablet {
+    display: none;
+  }
+
+  .faq {
     display: none;
   }
 }
