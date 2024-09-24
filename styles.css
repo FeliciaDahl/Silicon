@@ -122,7 +122,7 @@ display: none;
     width: var(--_w);
     height: var(--_h);
   
-  input[type="checkbox"]  {
+    .input-darkmode  {
     appearance: none;
 
     }
@@ -145,13 +145,13 @@ display: none;
     height: 90%;
     border-radius: 50%;
     border: none;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
    
    transition: all .2s;
    
   }
 
-  input[type="checkbox"]:checked + .slider::before {
+  .input-darkmode:checked + .slider::before {
     left: calc(100% - var(--_h));
   }
 
@@ -549,6 +549,53 @@ p{
     font-weight: 800;
   }
 }
+.info-card-1 {
+  border: 1px solid black;
+  height: 600px;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1000px;
+
+  .btn-learn {
+  width: 160px;
+  height: 45px;
+  padding: 1rem;
+  }
+}
+.info-text {
+  .h2-info {
+  
+   padding-bottom: 2rem;
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+li {
+  padding-bottom: 1rem;
+  color: var(--clr-bd-text);
+}
+.fa-li {
+  color: var(--crl-primary);
+  width: 0;
+}
+}
+.info-1-img {
+  position: relative;
+  
+  .img-send{
+    position: absolute;
+    z-index: 20;
+    bottom: -20%;
+    left: 40%;
+
+  }
+}
+
+
 /* Varför följer inte container med?? */
 .faq {
   width: 100%;
@@ -597,14 +644,13 @@ p{
 }
 
 /* Vilken del ska jag använda? */
-label {
+.q-label {
     display: grid;
     /* max-width: 400px; */
     /* display: block;     */
-   padding: 2rem;
-   padding-right: 4rem;
+    padding: 2rem;
+    padding-right: 4rem;
     margin: 0 auto;
-    cursor: pointer;
 /*     
     border: .5px solid var(--clr-br); */
     border-radius: 3px;
@@ -631,13 +677,14 @@ label {
 .input-btn::before {
 
   position: absolute;
+
   top: 30%;
-  right: 2%;
+  right: 5%;
   content: url("https://img.icons8.com/material-sharp/16/1A1A1A/expand-arrow--v1.png");
   display: flex;
   align-items: center;
-  justify-content: center;
-
+  justify-content:center;
+  cursor: pointer;
   width: 30px;
   aspect-ratio: 1/ 1;
   border: .3px solid black;
@@ -646,12 +693,11 @@ label {
   border-radius: 50%;
 }
 .input-btn:checked::before {
-  display: grid;
-  
   position: absolute;
-  top: 7%;
-  right: 3%;
+  top:10%;
+  right: 5%;
   justify-items: end;
+  content: url();
   content: url("https://img.icons8.com/material-outlined/16/FFFFFF/collapse-arrow.png");
   background-color: var(--crl-primary);
   border: 1px solid var(--clr-br);
@@ -685,11 +731,19 @@ label {
        
         text-decoration: none;
         color: var(--crl-primary);
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
     
       .chat {
         text-decoration: none;
         color: #22C55E;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
   }
 
