@@ -45,7 +45,10 @@
 .pt-2 {
   padding-top: 2rem;
 }
+.bd-text {
+  color: var(--clr-bd-text);
 
+}
 body {
 
     font-family: "Manrope", sans-serif;
@@ -414,14 +417,14 @@ padding-bottom: 1rem;
 }
 
 .box-pic {
+  display: grid;
+  place-items: center;
   background-color: #6365f113;
   opacity: .8;
   width: 60px;
   height: 60px;
   border-radius: 8px;
-  justify-items: center;
-  justify-content: center;
-  align-content: center;
+ 
 
 }
 .box {
@@ -549,29 +552,30 @@ p{
     font-weight: 800;
   }
 }
-.info-card-1 {
-  border: 1px solid black;
-  height: 600px;
+.info-card{
+  
+ 
   display: grid;
   gap: 2rem;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
+  margin: 0 auto; 
+  height: 600px;
   max-width: 1000px;
-
+}
   .btn-learn {
   width: 160px;
   height: 45px;
   padding: 1rem;
   }
-}
+
 .info-text {
   .h2-info {
   
    padding-bottom: 2rem;
     font-size: 32px;
-    font-weight: 700;
+    font-weight: 800;
   }
 
 li {
@@ -583,7 +587,7 @@ li {
   width: 0;
 }
 }
-.info-1-img {
+.info-img {
   position: relative;
   
   .img-send{
@@ -591,10 +595,18 @@ li {
     z-index: 20;
     bottom: -20%;
     left: 40%;
-
   }
 }
 
+.img-card {
+  position: absolute;
+  top:25%;
+  left:28%;
+}
+.flex {
+  display: flex;
+
+}
 
 /* Varför följer inte container med?? */
 .faq {
