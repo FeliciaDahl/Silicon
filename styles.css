@@ -553,8 +553,6 @@ p{
   }
 }
 .info-card{
-  
- 
   display: grid;
   gap: 2rem;
   grid-template-columns: 1fr 1fr;
@@ -608,6 +606,15 @@ li {
 
 }
 
+.rating-cards{
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+ 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  
+}
 /* Varför följer inte container med?? */
 .faq {
   width: 100%;
@@ -634,6 +641,7 @@ li {
  
   }
 }
+
 
 /* FRÅGA! Hur jag får pil till höger och centrerad */
 .faq-accordion {
@@ -759,8 +767,7 @@ li {
       }
   }
 
-.contact-con
-{
+.contact-con{
   display: grid;
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -980,8 +987,7 @@ border: .5px solid var(--clr-br);
   padding:2rem;
   justify-items: center;
 }
-  .app-features .container
-  {
+  .app-features .container{
  
    display: grid;
    max-width: 1300px;
