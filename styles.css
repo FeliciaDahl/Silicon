@@ -210,7 +210,7 @@ display: none;
     display: none;
 }
 
-.btn-header{
+.btn-sign-in{
 
     width: 140px;
     height: 36px;
@@ -266,8 +266,9 @@ background: linear-gradient(0deg, rgba(99,102,241,0.07) 0%, rgba(218,70,239,0.05
   
 }
 
-
-.content{
+/* Ändrade content då det var samma som faq-content
+kolla om det blev fel */
+.hero-content{
   width: 100%;
   display: grid;
   gap: 1rem;
@@ -278,7 +279,6 @@ background: linear-gradient(0deg, rgba(99,102,241,0.07) 0%, rgba(218,70,239,0.05
   grid-area: content;
 
 }
-
 
   .app-store{
     width: 100%;
@@ -639,12 +639,6 @@ position: relative;
     font-weight: 800; 
     padding-bottom: 1rem;
   }
-  p {
-    font-size: 18px;
-    color: var(--clr-bd-text);
-    padding-bottom: 1rem;
- 
-  }
 }
 
 
@@ -654,9 +648,6 @@ position: relative;
   .q-list {
     position: relative;
     display: grid;
-
-    /* align-items: center;
-    text-align: center; */
     border: .5px solid var(--clr-br); 
     border-radius: 6px;
  }
@@ -664,24 +655,22 @@ position: relative;
 
   .input-btn {
     appearance: none;
-   
+  
    
 }
 
 /* Vilken del ska jag använda? */
 .q-label {
     display: grid;
-    /* max-width: 400px; */
-    /* display: block;     */
+  
     padding: 2rem;
     padding-right: 4rem;
     margin: 0 auto;
-/*     
-    border: .5px solid var(--clr-br); */
+
     border-radius: 3px;
     color: var(--clr-dark);
     font-weight: 600;
-    transition: ease .2s;
+   
 
     &:hover .input-btn::before {
       box-shadow: 0 0 5px var(--clr-dark);
@@ -689,14 +678,15 @@ position: relative;
 }
 
 
-.content {
-  display: grid;
-  width: 100%;
+.faq-content {
+    display: grid;
+    width: 100%;
     color: var(--clr-bd-text);
     padding: 2rem;
-    /* border: .5px solid var(--clr-br); */
+   text-align: center;
     margin: 0 0 1px 0;
     border-radius: 3px;
+    transition: all 1s ease-out;
     
 }
 .input-btn::before {
@@ -716,6 +706,7 @@ position: relative;
   background-color: var(--crl-light);
   border: none;
   border-radius: 50%;
+  
 }
 .input-btn:checked::before {
   position: absolute;
@@ -729,12 +720,14 @@ position: relative;
   color: var(--crl-light);
 
 }
-.input-btn + label + .content {
+.input-btn + label + .faq-content {
     display: none;
+    transition: all 1s ease-out;
 }
 
-.input-btn:checked + label + .content {
+.input-btn:checked + label + .faq-content {
     display: block;
+    
 }
 
 .contact-cards {
@@ -993,7 +986,7 @@ align-items: center;
   font-size: 54px;
 }
 .p-hero {
-  padding-top: 0;
+  text-align: left;
 }
 .app-btn {
   display: flex;
