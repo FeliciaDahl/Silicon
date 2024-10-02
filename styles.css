@@ -70,6 +70,11 @@
   font-weight: 800;
 }
 
+.h3-20 {
+  font-size: 20px;
+  font-weight: 800;
+}
+
 .flex {
   display: flex;
   gap: 1rem;
@@ -148,12 +153,6 @@ display: none;
     gap:1rem;
     align-items: center;
      
-/*     
-    &:hover {
-      border: .5px solid var(--clr-bd-text);
-      box-shadow: 0 0 3px var(--clr-m-text);
-      cursor: pointer;
-     } */
  
     }
     
@@ -234,8 +233,8 @@ display: none;
 
 .hero {
 
-  background-image: radial-gradient(circle, rgba(99, 101, 242, 0.048),  rgba(137, 90, 246, 2%), hsla(292, 84%, 61%, 2%));  
-
+background: rgb(99,102,241);
+background: linear-gradient(0deg, rgba(99,102,241,0.07) 0%, rgba(218,70,239,0.05) 42%, rgba(241,244,253,0.1) 83%);
 }
 
 
@@ -253,30 +252,23 @@ display: none;
   grid-template-areas: "head"
                       "content";
 
-  height: 850px;
-
   overflow: hidden;
 
   }
 
 }
  .hero-h1 {
-  width: 100%;
-  align-content: center;
-  justify-content: center;
   text-align: center;
   font-size: 34px;
   font-weight: 800;
   color: var(--clr-dark);
   grid-area: head;
   
-  
 }
 
 
 .content{
   width: 100%;
-  padding: var(--container-padding);
   display: grid;
   gap: 1rem;
   margin: 0 auto;
@@ -299,7 +291,7 @@ display: none;
 
     &:hover {
       border: .5px solid var(--clr-bd-text);
-      box-shadow: 0 0 3px var(--clr-m-text);
+      box-shadow: 0 0 5px var(--clr-m-text);
       cursor: pointer;
      }
 }
@@ -336,7 +328,6 @@ position: relative;
  position: absolute;
  z-index: -1;
  bottom: 0;
- width: 100%;
  height: 90%;
  right: 0;
 
@@ -345,7 +336,6 @@ position: relative;
 position: absolute;
 z-index: -2;
 bottom: 0;
-width: 100%;
 height:80%;
 right: 100px;
 
@@ -361,7 +351,7 @@ margin: 0 auto;
 display: flex;
 gap: var(--container-padding);
 padding: 1rem;
- /* justify-content:space-evenly; */
+
  padding-bottom: 2rem;
  align-items: center;
 justify-items: center;
@@ -400,18 +390,14 @@ justify-content: center;
   grid-area: info;
 }
 .h2-features{
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 800;
   justify-content: center;
   padding-bottom: 1rem;
 }
-.p-features {
-font-size: 18px;
-color: var(--clr-bd-text);
-padding-bottom: 1rem;
-}
 
-.box-pic {
+
+.box-img {
   display: grid;
   place-items: center;
   background-color: #6365f113;
@@ -433,15 +419,7 @@ justify-items: center;
 gap:1rem;
 padding: 1rem;
 
-color: var(--clr-bd-text);
-h3{
-  color: var(--clr-dark);
-
-}
-p{
-  padding-top: .5rem;
-}
-.text{
+.box-content{
   text-align: left;
   padding-left: 1rem;
 }
@@ -477,11 +455,10 @@ p{
 }
 .function-h2 {
   color: var(--clr-dark);
-  font-size: 40px;
+  font-size: 28px;
   font-weight: 800;
-  justify-content: center;
   text-align: center;
-  padding-bottom: 2rem;
+ 
 }
 .function-img {
   display: flex;
@@ -492,30 +469,32 @@ p{
   align-content: center;
   justify-content: center;
 }
+.function-h3 {
+  font-size: 22px;
+  font-weight: 800;
+  padding-bottom: 1rem;
+ 
+}
 .function-tx {
   margin: 0 auto;
-  display: grid;
-  padding: 2rem;
-  max-width: 600px;
+  max-width: 400px;
+  padding-top: 2rem;
   justify-content: center;
   text-align: center;
-  justify-content: center;
-  p {
-    color: var(--clr-bd-text);
-  }
+ 
 }
 
 .function-mobile {
 
-  h3 {
+  /* h3 {
     display: grid;
     margin: 0 auto;
     font-weight: 800;
     font-size: 21px;
     max-width: 300px;
     padding-bottom: 1rem;
-  }
-  #pic-tv-2-m{
+  } */
+  #img-tv-2-m{
     position: absolute;
   }
 }
@@ -603,7 +582,7 @@ position: relative;
 .rating-cards{
   width: 100%;
   height: 500px;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
 
   display: grid;
@@ -646,8 +625,6 @@ position: relative;
 /* Varför följer inte container med?? */
 .faq {
   width: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
   margin: 0 auto;
 }
 
@@ -768,7 +745,7 @@ position: relative;
     width: 100%;
     border-radius: 8px;
     border: 1px solid var(--clr-br);
-    padding: 2rem;
+    padding: 1rem;
     color: var(--clr-bd-text);
     
    
@@ -853,7 +830,14 @@ border: .5px solid var(--clr-br);
 
 }
 
+.footer{
+color: var(--clr-m-text);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 
+}
  
 
 
@@ -872,7 +856,7 @@ border: .5px solid var(--clr-br);
     .hero-h1 {
       width: 100%;
       text-align: center;
-      font-size: 50px;
+      font-size: 44px;
       font-weight: 800;
       color: var(--clr-dark);
       
@@ -886,39 +870,43 @@ border: .5px solid var(--clr-br);
 
         grid-template-areas: "head head"
                               "content phone";
+
+}                        
        .img-hero {
           display: block;
           display: grid;
           grid-area: phone;
-          
+        
         }
         .hero-h1{
           display: grid;
-          grid-area: head;
+         
           text-align: center;
           justify-content: center;
-          align-items: center;
+          align-items: center; 
+          grid-area: head;
         }
         .content {
           display: grid;
           grid-area: content;
         } 
 
-        
-      }
-        .hero-s-p {
+        .p-hero {
           text-align: left;
           font-size: 18px;
         } 
-      
-
+    
+     
    #brand-icons{
     display: block;
    }
    #brand-1, #brand-2{
     display: none;
    }
-
+   .h2-features {
+    font-size: 34px;
+    font-weight: 800;
+  }
    .benefit-box {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -927,11 +915,20 @@ border: .5px solid var(--clr-br);
 .function-mobile {
   display: none;
 }
+
+.function-h2 {
+  font-size: 34px;
+}
+.function-tx {
+  max-width: 500px;
+}
 .function-tablet {
   display: block;
   margin: 0 auto;
   max-width: 720px;
   } 
+
+
 .faq{
   max-width: 720px;
 }
@@ -948,6 +945,12 @@ border: .5px solid var(--clr-br);
   display: flex;
   width: 100%;
 }
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  gap: .5rem;
+}
 }
   
 @media (min-width: 1200px) {
@@ -956,7 +959,7 @@ border: .5px solid var(--clr-br);
   {
    
     gap: 3rem;
-    max-width: 1200px;
+    max-width: 1300px;
     grid-template-columns:auto 1fr auto auto;
 
   }
@@ -973,24 +976,39 @@ border: .5px solid var(--clr-br);
 
 
 .hero .container {
-  max-width: 1200px;
+  max-width: 1300px;
   width: 100%;
+  height: 800px;
   display: grid; 
-  gap: 4rem;
+  gap: 2rem;
   padding-top: 5rem;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 700px auto;
 
   grid-template-areas: "head phone"
                         "content phone";
+}
 
 .hero-h1{
   text-align: left;
+  font-size: 54px;
+}
+.p-hero {
+  padding-top: 0;
+}
+.app-btn {
+  display: flex;
 }
 
+.img-front {
+  width: auto;
+}
+.img-back {
+  width: auto;
+}
 .btn-discover{
   padding-top: 4rem;
 }
-}
+
 
 #brand-icons, #brand-1, #brand-2 {
   display: flex; 
@@ -1015,12 +1033,20 @@ border: .5px solid var(--clr-br);
   padding-left: 2rem;
  }
  .h2-features {
- text-align: left; 
+ text-align: left;
+ font-size: 40px; 
 }
 .p-features{
   text-align: left;
 }
   } 
+  .function-h2 {
+    font-size: 40px;
+  }
+  .function-h3 {
+    font-size: 24px;
+  }
+
   .function-desktop {
   
     display: block;
@@ -1035,28 +1061,29 @@ border: .5px solid var(--clr-br);
   padding-top: 3rem;
   display: grid;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1300px;
   justify-content: center;
     /* margin: 0 auto; */
 }
   .desktop-layout {
     display: grid;
     width: 100%;
+    position: relative;
+    max-width: 1300px;
     margin: 0 auto;
   
-    gap: 2rem;
-    grid-template-columns: auto 1fr;
-    grid-template-areas: "faq-heading q-list"
+   
+    grid-template-columns: auto 750px;
+    grid-template-areas: "faq q-list"
                             "contact q-list";
       }
 
     .faq-heading { 
-   
-      width: 60%;
-      padding-left: 0;
+     
+      width: 70%;
       margin-left: 0;
       padding-top: 0;
-      grid-area: faq-heading;
+      grid-area: faq;
       text-align: start;
       justify-content: left;
 
@@ -1068,19 +1095,18 @@ border: .5px solid var(--clr-br);
     .faq-accordion {
       width: 100%;
       grid-area: q-list;
+      padding-left: 1rem;
     }
 .contact-cards {
-  width: 100%;
-  height: 170px;
-  display: grid;
-  padding-bottom: 5rem;
-  padding-top: 0;
-  margin-left: 0;
-  gap: 2rem;
+  position: absolute;
+  width: 90%;
+ font-size: 14px;
+   display: grid;
   grid-area: contact;
 }
 
 .newsletter {
+  max-width: 1300px;
   display: flex;
 align-items: center;
 justify-content: center;
@@ -1088,8 +1114,5 @@ justify-content: center;
 
 .desktop-only {
 display: block;
-
 }
 }
-/* Känns som jag måste repetera samma kod ofta
-hur kan man fixa detta. tex container margin */
