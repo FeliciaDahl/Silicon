@@ -7,30 +7,30 @@
     <link rel="stylesheet" href="styles.css">
     <title>Silicon</title>
     <meta name="description" content="Silicon gives you a new generation of
-     mobile banking. Save, spend & manage money easy in your pocket. Open a account for free!">
+     mobile banking. Save, spend & manage money easy in your pocket!">
   
 </head>
 <body>
-    <header>
+    <header aria-label="main-navigation">
     <div class="container">
 
-        <a href="index.html"><img src="images/logo-header.svg" alt="Silicon logo"></a>
-
+        <a href="index.html"><img src="images/logo-header.svg" alt="Silicon bank logo"></a>
+ 
         <nav id="nav-f">
             <a class="nav-features" href="features.html">Features</a>
         </nav>
 
         <div class="btn-toggle">
-            <span id="dark-mode" class="label">Dark mode </span>
+            <span id="dark-mode" class="label">Dark mode</span>
    
-         <label class="switch">
+         <label class="switch" aria-labelledby="darkmode switch">
             <input class="input-darkmode" type="checkbox">
                 <span class="slider"></span>
         </label>
         </div>
 
         <div id="sign-in">
-            <a class= "btn btn-sign-in" href="sign-in.html"><img src="images/icon-signin.svg" alt="Sign in button">
+            <a class= "btn btn-sign-in" href="sign-in.html"><img src="images/icon-signin.svg" alt="Sign-in button">
              <span class="f-size-14">Sign in / up</span>
             </a>
         </div>
@@ -44,7 +44,7 @@
 </header>
 
 <main>
-    <section class="hero">
+    <section aria-label="hero" class="hero">
 
     <div class="container">
 
@@ -61,7 +61,7 @@
                 <a class="app-store" href="#" target="_blank"><img src="images/googleplay-light.svg.svg" alt="Link googleplay"></a>
             </div>
 
-        <div class="btn-discover flex pt-2">
+        <div class="btn-discover flex-1 pt-2">
             <button class="btn-circle">
             <img id="arrow-down" src="images/icon-arrowdown.svg" alt="button arrow-down">
             </button>
@@ -76,10 +76,11 @@
 </div>
 </section>
 
-<section id="brand-icons">
+<section aria-label="partners" id="brand-icons">
 
-    <div class="container ">
-<div class="icons">
+<div class="container">
+
+<div class="icons flex-2">
 
 <div id="brand-1" class="icon-boxes">
     <img src="images/icones/brand-1.svg" alt="icon-1">
@@ -104,8 +105,11 @@
 </div>
 </section>
 
-<section class="app-features">
+<section aria-label="app-features">
+
 <div class="container">
+
+<div class="app-features grid-2">
 
 <div class="app-info">
     <h2 class="h2-features">App Features</h2>
@@ -144,85 +148,95 @@
     <img src="images/features/app-feature-3.svg" alt="">
 </div>
 <div class="box-content">
-<h3 class="h3-20">Cost Statistics</h3>
-<p class="bd-text pt-1">Mattis urna ultricies non amet, purus
+    <h3 class="h3-20">Cost Statistics</h3>
+    <p class="bd-text pt-1">Mattis urna ultricies non amet, purus
     in auctor non. Odio vulputate ac nibh.</p>
-</div></div>
+</div>
+</div>
 
 <div class=" box box-4">
     <div class="box-img">
     <img src="images/features/app-feature-4.svg" alt="">
 </div>
 <div class="box-content">
-<h3 class="h3-20">Support 24/7</h3>
-<p class="bd-text pt-1">A elementum, imperdiet enim, pretium
+    <h3 class="h3-20">Support 24/7</h3>
+    <p class="bd-text pt-1">A elementum, imperdiet enim, pretium
     etiam facilisi in aenean quam mauris.</p>
-</div></div>
+</div>
+</div>
 
 <div class="box box-5">
     <div class="box-img">
     <img src="images/features/app-feature-5.svg" alt="">
 </div>
 <div class="box-content">
-<h3 class="h3-20">Regular Cashback</h3>
-<p class="bd-text pt-1">Sit facilisis dolor arcu, fermentum
+    <h3 class="h3-20">Regular Cashback</h3>
+    <p class="bd-text pt-1">Sit facilisis dolor arcu, fermentum
     vestibulum arcu elementum imperdiet
     eleifend.</p>
-</div></div>
+</div>
+</div>
 
 <div class="box box-6">
     <div class="box-img">
     <img src="images/features/app-feature-6.svg" alt="">
     </div>
 <div class="box-content">
-<h3 class="h3-20">Top Standards</h3>
-<p class="bd-text pt-1">Faucibus cursus maecenas lorem
+    <h3 class="h3-20">Top Standards</h3>
+    <p class="bd-text pt-1">Faucibus cursus maecenas lorem
     cursus nibh. Sociis sit risus id. Sit
     facilisis dolor arcu.</p>
-</div></div>
+</div>
+</div>
+
 </div>
 </div>
 
 <div class="img-features">
     <img id="img-iphone" src="images/features-iPhone.svg" alt="Iphone">
     <img id="img-card" src="images/features-card.svg" alt="Bankcard">
-</div>
+    </div>
+</div>  
 </div>
 </section>
 
 
-<section class="function">
+<section aria-label="app-functions" class="function">
+
 <div class="container">
 
     <h2 class="function-h2 pb-2">How does it work?</h2>
 
     <div class="function-mobile">
-        <div class="function-img">
-            
-            <img id="img-tv-2-m" src="images/hdw/screen-m.svg" alt="phonescreen showing">
-            <img id="cover-tv-2-m" src="images/hdw/case-mobile.svg" alt="">
+
+    <div class="function-img">
+    <img id="img-mv" src="images/hdw/screen-m.svg" alt="showing account balance in app ">
+    <img id="cover-mv" src="images/hdw/case-mobile.svg" alt="">
     </div>
+
     <div class="function-tx">
         <h3 class="function-h3">Transfers to people from your contact list</h3>
         <p class="bd-text">Proin volutpat mollis egestas. Nam luctus facilisis
             ultrices. Pellentesque volutpat ligula est. Mattis
             fermentum, at nec lacus.</p>
-        </div>
+    </div>
     </div>
 
 
     <div class="function-tablet">
-        <div class="function-img">
-    <img id="tv-1" src="images/hdw/iPhone-1-tv.svg" alt="phonescreen showing app ">
-    <div id="complett">
-    <img id="pic-tv-2" src="images/hdw/iphone-pic-mv.svg" alt="phonescreen showing">
+
+    <div class="function-img">
+    <img id="img-tv-1" src="images/hdw/iPhone-1-tv.svg" alt="showing your cards in app ">
+
+    <img id="img-tv-2" src="images/hdw/iphone-pic-mv.svg" alt="showing account balance in app">
     <img id="cover-tv-2" src="images/hdw/iphone-mv.svg" alt="">
+
+    <img id="img-tv-3" src="images/hdw/iPhone-3-tv.svg" alt="showing transaction in app">
     </div>
-    <img id="tv-3" src="images/hdw/iPhone-3-tv.svg" alt="phonescreen showing app">
-    </div>
+
     <div class="function-tx">
-        <h3 class="function-h3">Step 3. Transfers to people from your
-            contact list</h3>
+        <h2 class="h2-32">Step 3. Transfers to people from your
+            contact list</h2>
         <p class="bd-text">Proin volutpat mollis egestas. Nam luctus facilisis ultrices.
             Pellentesque volutpat ligula est. Mattis fermentum, at nec
             lacus. </p>
@@ -231,112 +245,125 @@
 
     <div class="function-desktop">
     <div class="function-img">
-<img id="dt-1" src="images/hdw/iPhone-1-dt.svg" alt="phonescreen showing budgetplan">
-<img id="dt-2" src="images/hdw/iPhone-2-dt.svg" alt="phonescreen showing cards">
-<img id="dt-3" src="images/hdw/iphone-3-dt.svg" alt="phonescreen showing transactions">
-</div>
-<div class="function-tx">
-    <h3 class="function-h3">Latest transaction history</h3>
-    <p class="bd-text">Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in consectetur condimentum. </p>
-</div>
-</div>
+    <img id="img-dv-1" src="images/hdw/iPhone-1-dt.svg" alt="showing budgetplan in app">
+    <img id="img-dv-2" src="images/hdw/iPhone-2-dt.svg" alt="showing cards in app">
+    <img id="img-dv-3" src="images/hdw/iphone-3-dt.svg" alt="showing transactions in app">
+    </div>
 
+    <div class="function-tx">
+        <h3 class="h3-24">Latest transaction history</h3>
+        <p class="bd-text">Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in consectetur condimentum. </p>
+    </div>
+
+</div>
 </div>
 </section>
 
-<section class="desktop-only">
+<section aria-label="learn more" class="desktop-only">
 <div class="container">
 
 <div class="info-cards">
 
-    <div class="info-card">
-    <div class="info-text">
-        <h2 class="h2-info">
-            Make your money transfer simple and clear
-        </h2>
+    <div class="info-card grid-2">
+        <div class="info-text">
+        <h2 class="h2-32 pb-2">Make your money transfer simple and clear</h2>
+
         <ul class="fa-ul">
-            <li><span class="fa-li"><i class="fa-sharp fa-regular fa-circle-check"></i>
+            <li class="pb-1 bd-text"><span class="fa-li"><i class="fa-sharp fa-regular fa-circle-check"></i>
             </span>Banking transactions are free for you</li>
 
-            <li><span class="fa-li"><i class="fa-sharp fa-regular fa-circle-check"></i>
+            <li class="pb-1 bd-text"><span class="fa-li"><i class="fa-sharp fa-regular fa-circle-check"></i>
             </span>No monthly cash commission</li>
 
-            <li><span class="fa-li"><i class="fa-sharp fa-regular fa-circle-check"></i>
+            <li class="pb-1 bd-text"><span class="fa-li pb-2"><i class="fa-sharp fa-regular fa-circle-check"></i>
             </span>Manage payments and transactions online</li>
-          </ul>
-          <div class="pt-2">
-         <button class="btn btn-learn ">Learn more  <i class="fa-sharp fa-solid fa-arrow-right"></i></button>
-    </div></div>
+        </ul>
 
-    <div class="info-img">
-        <img class="img-budget" src="/images/dt-info/budget.svg" alt="showing budget-feature on app">
-        <img class="img-send" src="/images/dt-info/send-to.svg" alt="pictures from contacts">
+        <div class="pt-2">
+         <a class="btn btn-learn" href="#"><span>Learn more <i class="fa-sharp fa-solid fa-arrow-right"></i></span></a> 
+        </div>
+
     </div>
-</div>
+        <div class="info-img">
+            <img class="img-budget" src="/images/dt-info/budget.svg" alt="showing budget-feature on app">
+            <img class="img-send" src="/images/dt-info/send-to.svg" alt="pictures from contacts">
+        </div>
 
-<div class="info-card">
+    </div>
+
+<div class="info-card grid-2">
 
 <div class="info-img">
     <img class="img-contact" src="/images/dt-info/contacts.svg" alt="showing contact-feature on app">
     <img class="img-card" src="/images/dt-info/card.svg" alt="picture of a bankcard">
 </div>
 
-<div class="info-text">
-    <h2 class="h2-info">
-        Receive payment from international bank details</h2>
+    <div class="info-text">
+        <h2 class="h2-32 pb-2">Receive payment from international bank details</h2>
         
-        <div class="flex">
-            
+    <div class="flex-2">   
         <div class="info-area">
-        <div class="box-pic">
+            <div class="box-img">
             <img src="images/features/app-feature-5.svg" alt=""></div>
             <p class="bd-text pt-1">Manage your payments online. Mollis congue egestas egestas fermentum fames.</p>
         </div>
 
         <div class="info-area">
-        <div class="box-pic">
+            <div class="box-img">
             <img src="images/features/app-feature-1.svg" alt="">
         </div>
-            <p class="bd-text pt-1">A elementur and imperdiet enim, pretium etiam facilisi aenean quam mauris.</p>
-            </div></div>
-            <div class="pt-2">
-                <button class="btn btn-learn ">Learn more  <i class="fa-sharp fa-solid fa-arrow-right"></i></button>
-           </div>
-</div></div>
+            <p class="bd-text pt-1 pb-2">A elementur and imperdiet enim, pretium etiam facilisi aenean quam mauris.</p>
+    </div>
+    </div>
 
-<div class="rating-card">
-    <div class="rating-cards">
+        <div class="pt-2">
+            <a class="btn btn-learn" href="#"><span>Learn more <i class="fa-sharp fa-solid fa-arrow-right"></i></span></a> 
+        </div>
+</div>
+</div>
+</div>
+</section>
+
+<section aria-label="reviews" class="desktop-only">
+
+    <div class="container">
+
+    <div class="rating-card">
+
+    <div class="rating-cards grid-1">
     <div class="h2-rating h2-32">
         <h2>Clients are Loving Our App</h2>
     </div>
-    <div class="rating-box rating-1">
-        <div class="apo-icon">
+
+    <div class="rating-box">
+    <div class="apo-icon">
         <img src="/images/dt-info/apo-icon.svg" alt="aprostrophe sign">
-        </div>
+    </div>
         <img class="pt-1 pb-1"  src="/images/dt-info/rating-1.svg" alt="four stars">
         <p class="bd-text">Sit pretium aliquam tempor, orci dolor sed maecenas rutrum sagittis. Laoreet posuere rhoncus, egestas lacus, egestas justo aliquam vel. Nisi vitae lectus hac hendrerit. Montes justo turpis sit amet.</p>
         
-        <div class="flex pt-2">
+        <div class="flex-1 pt-2">
         <img src="/images/dt-info/fannie.svg" alt="image of Fannie Summers">
         <div class="flex-align">
         <h5>Fannie Summers</h5>
         <p class="bd-text f-size-14">Designer</p>
     </div></div>
     </div>
-    <div class="rating-box rating-2">
-        <div class="apo-icon">
+
+    <div class="rating-box">
+    <div class="apo-icon">
         <img src="/images/dt-info/apo-icon.svg" alt="aprostrophe sign">
     </div>
         <img class="pt-1 pb-1" src="/images/dt-info/rating-2.svg" alt="five stars">
         <p class="bd-text">Nunc senectus leo vel venenatis accumsan vestibulum sollicitudin amet porttitor. Nisl bibendum nulla tincidunt eu enim ornare dictumst sit amet. Dictum pretium dolor tincidunt egestas eget nunc.</p>
-        <div class="flex pt-2">
+    <div class="flex-1 pt-2">
         <img src="/images/dt-info/albert.svg" alt="image of Albert Flores">
-        <div class="flex-align">
+    <div>
         <h5>Albert Flores</h5>
         <p class="bd-text f-size-14">Developer</p>
     </div></div>
-</div>
-</div>
+
+
 </div>
 </div>
 </div>
@@ -356,11 +383,11 @@
 
     <div class="q-list">
         <input class="input-btn" type="checkbox">
-        <label class="q-label">Is any of my personal information
+        <label class="q-label" aria-labelledby="accordion FAQ">Is any of my personal information
             stored in the App? </label>
     
         <div class="faq-content">
-            <p class="p-1">Nunc duis id aenean gravida tincidunt eu, tempor
+            <p>Nunc duis id aenean gravida tincidunt eu, tempor
                 ullamcorper. Viverra aliquam arcu, viverra et,
                 cursus. Aliquet pretium cursus adipiscing gravida
                 et consequat lobortis arcu velit. Nibh pharetra
@@ -370,18 +397,18 @@
                 montes, duis egestas. Vehicula eu etiam quam
                 tristique tincidunt suspendisse ut consequat.</p>
     
-            <p class="p-2">Ornare senectus fusce dignissim ut. Integer
-                    consequat in eu tortor, faucibus et lacinia
-                    posuere. Turpis sit viverra lorem suspendisse
-                    lacus aliquam auctor vulputate. Quis egestas
-                    aliquam nunc purus lacus, elit leo elit facilisi.
-                    Dignissim amet adipiscing massa integer.</p>
+            <p>Ornare senectus fusce dignissim ut. Integer
+                consequat in eu tortor, faucibus et lacinia
+                posuere. Turpis sit viverra lorem suspendisse
+                lacus aliquam auctor vulputate. Quis egestas
+                aliquam nunc purus lacus, elit leo elit facilisi.
+                Dignissim amet adipiscing massa integer.</p>
         </div>
     </div>
 
     <div class="q-list">
         <input class="input-btn" type="checkbox">
-        <label class="q-label"> What formats can I download my
+        <label class="q-label" aria-labelledby="accordion FAQ"> What formats can I download my
             transaction history in? </label>
         <div class="faq-content">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus fugiat pariatur voluptatum qui maiores perferendis alias sit temporibus consequatur optio!.</p>        
@@ -390,7 +417,7 @@
 
     <div class="q-list">
         <input class="input-btn" type="checkbox">
-        <label class="q-label">Can I schedule future transfers?</label>
+        <label class="q-label" aria-labelledby="accordion FAQ">Can I schedule future transfers?</label>
         <div class="faq-content">
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius alias rerum, possimus nesciunt quam placeat.</p>
         </div>
@@ -398,7 +425,7 @@
 
     <div class="q-list">
         <input class="input-btn" type="checkbox">
-        <label class="q-label">When can I use Banking App
+        <label class="q-label" aria-labelledby="accordion FAQ">When can I use Banking App
             services?</label>
         
         <div class="faq-content">
@@ -408,7 +435,7 @@
 
     <div class="q-list">
         <input class="input-btn" type="checkbox">
-        <label class="q-label">Can I create my own password that is
+        <label class="q-label" aria-labelledby="accordion FAQ">Can I create my own password that is
             easy for me to remember?</label>
         
         <div class="faq-content">
@@ -418,7 +445,7 @@
 
     <div class="q-list">
         <input class="input-btn" type="checkbox">
-        <label class="q-label">What happens if I forget or lose my
+        <label class="q-label" aria-labelledby="accordion FAQ">What happens if I forget or lose my
             password?</label>
         
         <div class="faq-content">
@@ -464,8 +491,10 @@
     <input class="input-email" type="email" name="email" required placeholder="✉︎ Your email">
     <button class="btn btn-email">Subscribe</button>
 </div>
-</div>
 </form>
+
+</div>
+
 </section>
 </main>
 <footer>
