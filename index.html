@@ -12,10 +12,15 @@
 </head>
 <body>
     <header aria-label="main-navigation">
+    <div class="head-bg">
     <div class="container">
 
-        <a href="index.html"><img src="./images/header/logo-header.svg" alt="Silicon bank logo"></a>
- 
+        <a href="index.html">
+            <img class="show-light" src="./images/header/logo-header.svg" alt="Silicon bank logo">
+            <img class="show-dark" src="./images/header/logo-header-dark.svg" alt="Silicon bank logo">
+        </a>
+        
+
         <nav id="nav-f">
             <a class="nav-features" href="features.html">Features</a>
         </nav>
@@ -24,7 +29,7 @@
             <span id="dark-mode" class="label">Dark mode</span>
    
          <label class="switch" aria-labelledby="darkmode switch">
-            <input class="input-darkmode" type="checkbox">
+            <input type="checkbox" id="darkmode-switch">
                 <span class="slider"></span>
         </label>
         </div>
@@ -57,8 +62,10 @@
             <p class="p-hero bd-text pt-1 pb-1 f-size-18">We offer you a new generation of the mobile banking. Save, spend & manage money in your pocket.</p>
             
             <div class="app-btn grid-1 pt-2">
-                <a class="app-store" href="#" target="_blank"> <img src="./images/hero/appstore-light.svg.svg" alt="Link Applestore"></a>
-                <a class="app-store" href="#" target="_blank"><img src="./images/hero/googleplay-light.svg.svg" alt="Link googleplay"></a>
+                <a class="app-store" href="#" target="_blank"><img class="show-light" src="./images/hero/appstore-light.svg.svg" alt="Link Applestore">
+                    <img class="show-dark" src="./images/hero/appstore-dark.svg" alt="Link Applestore"></a>
+                <a class="app-store" href="#" target="_blank"><img class="show-light" src="./images/hero/googleplay-light.svg.svg" alt="Link googleplay">
+                    <img class="show-dark" src="./images/hero/googleplay-dark.svg" alt="Link googleplay"></a>
             </div>
 
         <div class="btn-discover flex-1 pt-2">
@@ -73,6 +80,7 @@
              <img class="img-front" src="./images/hero/hero-phone-front.svg" alt= "Iphone showing Silicon app">
             <img class="img-back" src="./images/hero/hero-phone-back.svg" alt="Iphone in background">
         </div>
+</div>
 </div>
 </section>
 
@@ -272,8 +280,8 @@
             <li class="pb-1 bd-text"><span class="fa-li"><i class="fa-sharp fa-regular fa-circle-check"></i>
             </span>Banking transactions are free for you</li>
 
-            <li class="pb-1 bd-text"><span class="fa-li"><i class="fa-sharp fa-regular fa-circle-check"></i>
-            </span>No monthly cash commission</li>
+            <li class="pb-1 bd-text"><p class="fa-li"><i class="fa-sharp fa-regular fa-circle-check"></i>
+            </p>No monthly cash commission</li>
 
             <li class="pb-1 bd-text"><span class="fa-li pb-2"><i class="fa-sharp fa-regular fa-circle-check"></i>
             </span>Manage payments and transactions online</li>
@@ -501,5 +509,6 @@
     <p class="footer f-size-14">Credit MadrasThemes</p>
 </div>
 </footer>
+<script src="darkmode.js"></script>
 </body>
 </html>

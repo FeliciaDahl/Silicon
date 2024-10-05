@@ -8,33 +8,55 @@
 
   --clr-br: #e2e5f1;
   --clr-f-br: #d4d7e5;
-
+  
   --clr-ph: #b4b7c9;
-  --clr-m-text: #9397ad;
+ 
+  --clr-h-text: #0b0f19;
   --clr-bd-text: #565973;
-  --clr-nav: #33354d;
 
+  --clr-m-text: #9397ad;
+  --clr-nav: #33354d;
+  --clr-circle-btn: #ffff;
   --clr-bg: #ffff;
   --clr-bg-light: #f3f6ff;
-
+  
 
   --container-padding: 1rem;
   --transition-time: all 0.2s;
 }
 
-* {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
 
   box-sizing: border-box;
 }
 
+.dark {
+    --clr-bg: var(--clr-dark);
+    --clr-bg-light:rgba(255, 255, 255, 0.04);
+    --clr-h-text: var(--clr-white);
+    --clr-bd-text:rgba(255, 255, 255, 0.07);
+    --clr-nav: var(--clr-white);
+    --clr-circle-btn:rgba(255, 255, 255, 0.05);
+  
+   .show-light { display:none; }
+   .show-dark{ display: block; } 
+  }
+  .show-light { display:block;}
+  .show-dark{ display: none; } 
+html {
+  color-scheme: light;
+}
 body {
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
+
+  background-color: var(--clr-bg);
+ 
 }
 
 .container {
@@ -87,8 +109,10 @@ body {
 
 
 /* || TYPOGRAPHY */
-
-.bd-text {
+h1, h2, h3, h4 {
+  color: var(--clr-h-text);
+}
+p {
   color: var(--clr-bd-text);
 }
 .f-size-14 {
@@ -106,31 +130,31 @@ body {
 .h2-32 {
   font-size: 32px;
   font-weight: 800;
-  color: var(--clr-dark);
+  
 }
 
 .h2-28 {
 font-size: 28px;
 font-weight: 800;
-color: var(--clr-dark);
+
 }
 
 .h2-25 {
   font-size: 25px;
   font-weight: 800;
-  color: var(--clr-dark);
+
   }
 
 .h3-24 {
   font-size: 24px;
   font-weight: 800;
-  color: var(--clr-dark);
+ 
 }
 
 .h3-20 {
   font-size: 20px;
   font-weight: 800;
-  color: var(--clr-dark);
+ 
 }
 
 .btn {
@@ -145,9 +169,19 @@ color: var(--clr-dark);
     box-shadow: 0 0 5px var(--clr-nav);
     border: 1px solid var(--clr-nav);
     cursor: pointer;
+    transition: var(--transition-time);
   }
 }
  /* || HEADER */
+ .head.bg {
+  background: rgb(99, 102, 241);
+  background: linear-gradient(
+    0deg,
+    rgba(99, 102, 241, 0.07) 0%,
+    rgba(218, 70, 239, 0.05) 42%,
+    rgba(241, 244, 253, 0.1) 83%
+  );
+}
 header {
   .container {
     display: grid;
@@ -166,8 +200,12 @@ header {
     color: var(--clr-nav);
     font-weight: 600;
 
-    &:hover {
+    &:hover,
+    &:focus-visible  {
+      color: var(--crl-primary);
       text-decoration: underline;
+      transition: var(--transition-time);
+
     }
   }
 }
@@ -195,7 +233,7 @@ header {
   width: var(--_w);
   height: var(--_h);
 
-  .input-darkmode {
+  #darkmode-switch {
     appearance: none;
   }
 
@@ -223,10 +261,10 @@ header {
   transition: var(--transition-time);
 }
 
-.input-darkmode:checked + .slider::before {
+#darkmode-switch:checked + .slider::before {
   left: calc(100% - var(--_h)); 
 }
-.input-darkmode:checked + .slider{
+#darkmode-switch:checked + .slider{
   background-color: var(--crl-primary); 
 }
 
@@ -253,15 +291,7 @@ header {
   }
 }
  /* || HERO */
-.hero {
-  background: rgb(99, 102, 241);
-  background: linear-gradient(
-    0deg,
-    rgba(99, 102, 241, 0.07) 0%,
-    rgba(218, 70, 239, 0.05) 42%,
-    rgba(241, 244, 253, 0.1) 83%
-  );
-}
+
 
 .hero .container {
   width: 100%;
@@ -282,7 +312,7 @@ header {
   text-align: center;
   font-size: 34px;
   font-weight: 800;
-  color: var(--clr-dark);
+
   grid-area: head;
 }
 
@@ -305,7 +335,7 @@ header {
   &:hover,
   &:focus-visible {
     box-shadow: 1px 1px 5px var(--clr-dark);
-    background-color: var(--clr-bd-text);
+    /* background-color: var(--clr-bd-text); */
     transition: var(--transition-time);
 
     cursor: pointer;
@@ -320,7 +350,7 @@ header {
     height: 45px;
     justify-items: center;
     border-radius: 50%;
-    background-color: var(--crl-light);
+    background-color: var(--clr-circle-btn);
     border: none;
 
     &:hover,
@@ -627,7 +657,7 @@ header {
   width: 30px;
   aspect-ratio: 1/ 1;
   border: 0.3px solid black;
-  background-color: var(--crl-light);
+  background-color: var(--clr-circle-btn);
   border: none;
   border-radius: 50%;
 }
@@ -663,8 +693,10 @@ header {
     text-decoration: none;
     color: var(--crl-primary);
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       text-decoration: underline;
+      transition: var(--transition-time);
     }
   }
 
@@ -672,8 +704,10 @@ header {
     text-decoration: none;
     color: #22c55e;
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       text-decoration: underline;
+      transition: var(--transition-time);
     }
   }
 
