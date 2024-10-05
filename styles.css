@@ -80,7 +80,11 @@ body {
   display: grid;
   gap: 2rem;
 }
-/*  */
+.grid-center {
+  display: grid;
+  place-items: center;
+}
+
 
 /* || TYPOGRAPHY */
 
@@ -95,6 +99,10 @@ body {
   font-size: 18px;
 }
 
+.f-semib {
+  font-weight: 600;
+}
+
 .h2-32 {
   font-size: 32px;
   font-weight: 800;
@@ -106,6 +114,12 @@ font-size: 28px;
 font-weight: 800;
 color: var(--clr-dark);
 }
+
+.h2-25 {
+  font-size: 25px;
+  font-weight: 800;
+  color: var(--clr-dark);
+  }
 
 .h3-24 {
   font-size: 24px;
@@ -341,13 +355,12 @@ header {
 /* || PARTNERS */
 #brand-icons {
   display: none;
+   
 }
 .icons {
-
-  margin: 0 auto;
+  /* margin: 0 auto; */
   padding: 1rem;
 
-  align-items: center;
   justify-items: center;
   justify-content: center;
 }
@@ -363,6 +376,9 @@ header {
   justify-items: center;
   align-items: center;
 }
+
+/* || APP FEATURES */
+
 .app-features {
   padding: 2rem;
   margin: 0 auto;
@@ -395,9 +411,7 @@ header {
   margin: 0 auto;
   grid-template-columns: 1fr auto;
   align-content: center;
-  align-items: top;
   justify-content: center;
-  justify-items: center;
   gap: 1rem;
   padding: 1rem;
 
@@ -524,7 +538,7 @@ header {
   width: 100%;
   margin: 0 auto;
   height: 500px;
-  max-width: 1300px;
+  max-width: 1200px;
 
   grid-template-columns: 1fr 1fr 1fr;
   place-items: center;
@@ -548,7 +562,6 @@ header {
 }
 
 .rating-box {
-  
   height: 350px;
   padding: 1rem;
   align-items: center;
@@ -559,7 +572,8 @@ header {
   box-shadow: 0 2px 5px var(--clr-br);
 }
 
-/* Varför följer inte container med?? */
+
+/* || FAQ */
 .faq {
   width: 100%;
   margin: 0 auto;
@@ -569,15 +583,9 @@ header {
   padding-top: 4rem;
   text-align: center;
   margin: 0 auto;
-
-  h2 {
-    font-size: 25px;
-    font-weight: 800;
-    padding-bottom: 1rem;
-  }
 }
 
-/* FRÅGA! Hur jag får pil till höger och centrerad */
+/* || FAQ ACCORDION */
 .faq-accordion {
   .q-list {
     position: relative;
@@ -586,22 +594,16 @@ header {
     border-radius: 6px;
   }
 }
-
 .input-btn {
   appearance: none;
 }
 
-/* Vilken del ska jag använda? */
 .q-label {
-  display: grid;
-
   padding: 2rem;
   padding-right: 4rem;
   margin: 0 auto;
-
   border-radius: 3px;
-  color: var(--clr-dark);
-  font-weight: 600;
+  text-align: center
 }
 
 .faq-content {
@@ -609,10 +611,8 @@ header {
   width: 100%;
   color: var(--clr-bd-text);
   padding: 2rem;
-  text-align: center;
   margin: 0 0 1px 0;
   border-radius: 3px;
-  transition: all 1s ease-out;
 }
 .input-btn::before {
   position: absolute;
@@ -649,6 +649,7 @@ header {
   display: block;
 }
 
+/* || CONTACT */
 .contact-cards {
   display: none;
 }
@@ -657,8 +658,7 @@ header {
   border-radius: 8px;
   border: 1px solid var(--clr-br);
   padding: 1rem;
-  color: var(--clr-bd-text);
-
+}
   .call {
     text-decoration: none;
     color: var(--crl-primary);
@@ -676,43 +676,31 @@ header {
       text-decoration: underline;
     }
   }
-}
 
-.contact-con {
-  display: grid;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  place-content: center;
-  justify-items: center;
-}
 
 .btn-contact {
   font-weight: 600;
   justify-items: center;
   align-items: center;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 .newsletter {
-  display: grid;
-  gap: 2rem;
+  
   place-items: center;
   align-items: center;
   margin: 0.5rem;
   padding: 2rem;
 
   border-radius: 8px;
-  background-color: var(--crl-light);
-
-  .subscribe {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 1rem;
-  }
+  background-color: var(--clr-bg-light);
 }
+  .subscribe {
+  align-items: center;
+  justify-content: center;
+    
+  }
 
 .input-email {
   padding: 0.5em;
@@ -734,7 +722,6 @@ header {
     border-radius: 0 0.5em 0.5em 0;
   }
 }
-
 .footer {
   color: var(--clr-m-text);
   display: flex;
@@ -744,71 +731,59 @@ header {
 }
 
 @media (min-width: 768px) {
+  /* || HEADER */
   header .container {
     max-width: 720px;
-    gap: 3rem;
   }
 
   #dark-mode {
     display: block;
   }
-
-  .hero-h1 {
-    width: 100%;
-    text-align: center;
-    font-size: 44px;
-    font-weight: 800;
-    color: var(--clr-dark);
-  }
-
+/* || HERO */
   .hero .container {
-    display: grid;
-    gap: 2rem;
+    max-width: 720px;
     grid-template-columns: 1fr 1fr;
 
     grid-template-areas:
       "head head"
       "content phone";
   }
+
   .img-hero {
     display: block;
-    display: grid;
-    grid-area: phone;
   }
   .hero-h1 {
-    display: grid;
+    font-size: 44px;
 
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    grid-area: head;
   }
-  .content {
-    display: grid;
-    grid-area: content;
-  }
-
   .p-hero {
     text-align: left;
-    font-size: 18px;
+   
   }
-
+  /* || PARTNERS */
   #brand-icons {
     display: block;
+  }
+  .icons {
+    max-width: 720px;  
+    margin: 0 auto;
   }
   #brand-1,
   #brand-2 {
     display: none;
   }
+/* || APP-FEATURES */
+  .app-features {
+    max-width: 720px;
+  }
   .h2-features {
     font-size: 34px;
-    font-weight: 800;
   }
   .benefit-box {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-
+/* || APP-FUNCTIONS */
   .function-mobile {
     display: none;
   }
@@ -824,7 +799,7 @@ header {
     margin: 0 auto;
     max-width: 720px;
   }
-
+/* || FAQ */
   .faq {
     max-width: 720px;
   }
@@ -839,9 +814,9 @@ header {
   }
   .newsletter {
     display: flex;
-    width: 100%;
+    max-width: 720px;
   }
-
+/* || FOOTER */
   .footer {
     display: flex;
     flex-direction: row;
@@ -868,13 +843,8 @@ header {
 
   .hero .container {
     max-width: 1300px;
-    width: 100%;
     height: 800px;
-    display: grid;
-    gap: 2rem;
-
     grid-template-columns: 600px auto;
-
     grid-template-areas:
       "head phone"
       "content phone";
@@ -891,21 +861,16 @@ header {
     display: flex;
   }
 
-  .img-front {
-    width: auto;
-  }
-  .img-back {
-    width: auto;
-  }
   .btn-discover {
     padding-top: 4rem;
   }
-
+/* || PARTNERS */
   #brand-icons,
   #brand-1,
   #brand-2 {
     display: flex;
   }
+  /* || APP-FEATURES */
   .img-features {
     display: block;
 
@@ -913,18 +878,18 @@ header {
     justify-items: center;
   }
   .app-features {
-    display: grid;
     max-width: 1300px;
-    justify-content: center;
+
+    display: grid;
     gap: 1rem;
-    width: 100%;
+    justify-content: center;
+   
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "app info"
       "app info";
-    .box {
-      padding-left: 2rem;
-    }
+  }
+
     .h2-features {
       text-align: left;
       font-size: 40px;
@@ -932,7 +897,7 @@ header {
     .p-features {
       text-align: left;
     }
-  }
+  /* || APP-FUNCTIONS */
   .function-h2 {
     font-size: 40px;
   }
@@ -949,13 +914,14 @@ header {
   .function-tablet {
     display: none;
   }
+    /* || FAQ */
   .faq {
     padding-top: 3rem;
     display: grid;
     width: 100%;
     max-width: 1300px;
     justify-content: center;
-    /* margin: 0 auto; */
+
   }
   .desktop-layout {
     display: grid;
@@ -1001,6 +967,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0;
+    padding: 0;
   }
 
   .desktop-only {
